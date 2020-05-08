@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+footer {
+    color: #358597;
+    background-color: #F4A896A1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 4.5rem;
+}
+
+/*.footer-bottom {*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    background-color: aliceblue;*/
+/*}*/
+
+.black {
+    color: black;
+}
+
+.black.a:hover {
+    color: grey;
+}
+
+.navbar-links-colour {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.navbar-background {
+    background-color: #358597 ;
+}
+
+.navbar-logo {
+    color: whitesmoke;
+    font-size: 20px;
+    border: 3px solid #F4A896;
+    padding: 5px;
+}
+
+.navbar-logo:hover {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.register-form {
+    top: 25% !important;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.darkgreen {
+    color: darkgreen;
+}
+
+.darkred {
+    color: darkred;
+}
+
+.border-red {
+    border: 1px solid darkred;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: darkred;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/*Responsive resolution*/
+
+/*Mobile-resolution < 600px*/
+@media only screen and (max-width: 600px) {
+    .navbar-links-colour {
+        color: whitesmoke;
+        border: none !important;
+        margin-left: 0 !important;
+        width: fit-content;
+        width: max-content;
+
+    }
+
+}
+
+/*Tablet resolution*/
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    .navbar-links-colour {
+        color: whitesmoke;
+        border: none !important;
+        margin-left: 0 !important;
+        width: fit-content;
+        width: max-content;
+
+    }
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/*HD resolution*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .desktop-flex {
+        display: flex;
+    }
+    .navbar-links-colour.a:hover {
+        color: whitesmoke;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(82,80,82,1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(82,80,82,1);
+        box-shadow: 0px 0px 5px 0px rgba(82,80,82,1);
+    }
+    .centering {
+        width: 270px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        margin: -75px 0 0 -135px;
+    }
+
+
+}
+
+/*Full HD and above*/
+@media screen and (min-width: 1201px) {
+    .desktop-flex {
+        display: flex;
+    }
+    .navbar-links-colour.a:hover {
+        color: whitesmoke;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(82,80,82,1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(82,80,82,1);
+        box-shadow: 0px 0px 5px 0px rgba(82,80,82,1);
+    }
+    .centering {
+        width: 270px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        margin: -75px 0 0 -135px;
+    }
+
+
+}
+
+
