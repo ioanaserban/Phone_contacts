@@ -1,5 +1,6 @@
 <?php
 require_once "layouts/head.php";
+require_once "validation/check.php";
 ?>
 
     <form method="post" action="database/register_user.php" class="centering register-form">
@@ -22,29 +23,35 @@ require_once "layouts/head.php";
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input name="password" type="password" class="form-control <?php if(isset($_GET['info'])){if($_GET['info']){echo "border-red";}} ?>" id="exampleInputPassword1" required>
+            <input name="password" type="password" class="form-control <?php if(isset($_GET['info'])){if($_GET['info'] == "wrong_match"){echo "border-red";}} ?>" id="exampleInputPassword1" required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword2">Confirm Password</label>
-            <div class=" d-flex ">
-                <input name="confirm_password" type="password" class="form-control <?php if(isset($_GET['info'])){if($_GET['info']){echo "border-red";}} ?>" id="exampleInputPassword2" required>
-                <div class=" tooltip "> <?php if(isset($_GET['info'])){if($_GET['info']){echo "<i class=\"fas fa-exclamation-circle ml-2 darkred mt-2\"></i> <span class=\"tooltiptext\">Tooltip text</span>";}}  ?> </div>
+            <input name="confirm_password" type="password" class="form-control <?php if(isset($_GET['info'])){if($_GET['info'] == "wrong_match"){echo "border-red";}} ?>" id="exampleInputPassword2" required>
+            <div class="d-flex">
+                <div>
+                    <?php if(isset($_GET['info'])){
+                        if($_GET['info'] == "wrong_match"){
+                            echo "<i class=\"fas fa-exclamation-circle ml-2 mr-2 mt-1 darkred\"></i>";
+                        }
+                    } ?>
+                </div>
+                <div class="darkred">
+                    <small> <?php if(isset($_GET['info'])){if($_GET['info'] == "wrong_match"){echo "Passwords should match";}} ?> </small>
+                </div>
             </div>
         </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-outline-info">Submit</button>
+
+        <button type="submit" class="btn btn-outline-info mt-3">Submit</button>
     </form>
 
-<?php
+    <?php
     if(isset($_GET['info'])) {
         if($_GET['info'] == "connected") {
-            echo " <div class='text-align mt-3 darkgreen'> <p> Contul dumneavoastra a fost creat cu succes! </p> </div> " ;
+            echo " <div class=' mt-3 darkgreen d-flex center-fit'> <p> Contul dumneavoastra a fost creat cu succes! </p> <i class=\"fas fa-check-circle mt-1 ml-3 darkgreen\"></i> </div> " ;
         }
     }
-?>
+    ?>
 
 <?php
 require_once "layouts/footer.php";

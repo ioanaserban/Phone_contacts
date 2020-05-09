@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,12 +24,20 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="ml-auto desktop-flex">
+            <?php if(!isset($_SESSION['ID'])) { ?>
             <div class="nav-item">
-                <a class="nav-link navbar-links-colour a" href="/login.php">Login</a>
+                <a class="nav-link navbar-links-colour a" href="/login.php">Log in</a>
             </div>
             <div class="nav-item">
                 <a class="nav-link navbar-links-colour a ml-2" href="/register.php">Register</a>
             </div>
+            <?php } else { ?>
+                <div class="nav-item">
+                    <form action="/database/logout.php" method="post">
+                        <button class="nav-link navbar-links-colour a navbar-background" >Log out</button>
+                    </form>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </nav>

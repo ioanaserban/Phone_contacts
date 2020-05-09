@@ -1,22 +1,42 @@
 <?php
 require_once "layouts/head.php";
+require_once "validation/check.php";
 ?>
 
-<form class="centering width-form">
-    <div class="form-group">
+<form method="post" action="database/login_user.php" class="centering width-form">
+    <div class="form-group mb-0">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
     </div>
-    <div class="form-group">
+    <div class="d-flex">
+        <div>
+            <?php if(isset($_GET['info'])){
+                if($_GET['info'] == "no_account"){
+                    echo "<i class=\"fas fa-exclamation-circle ml-2 mr-2 mt-1 darkred\"></i>";
+                }
+            } ?>
+        </div>
+        <div class="darkred mb-2">
+            <small> <?php if(isset($_GET['info'])){if($_GET['info'] == "no_account"){echo "This e-mail does not have an associated account";}} ?> </small>
+        </div>
+    </div>
+    <div class="form-group mb-0">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" required>
+        <input name="pass" type="password" class="form-control" id="exampleInputPassword1" required>
     </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div class="d-flex">
+        <div>
+            <?php if(isset($_GET['info'])){
+                if($_GET['info'] == "wrong_pass"){
+                    echo "<i class=\"fas fa-exclamation-circle ml-2 mr-2 mt-1 darkred\"></i>";
+                }
+            } ?>
+        </div>
+        <div class="darkred">
+            <small> <?php if(isset($_GET['info'])){if($_GET['info'] == "wrong_pass"){echo "Incorrect password";}} ?> </small>
+        </div>
     </div>
-    <button type="submit" class="btn btn-outline-info">Submit</button>
+    <button type="submit" class="btn btn-outline-info mt-3">Submit</button>
 </form>
 
 <?php
