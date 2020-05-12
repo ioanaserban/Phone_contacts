@@ -81,6 +81,48 @@ body {
     margin: auto;
 }
 
+.center-grid {
+    text-align: center;
+}
+.setting {
+    font-size: 100px;
+}
+
+.navbar-color{
+    color: #358597 ;
+}
+
+.footer-col {
+    color: #F4A896;
+}
+
+.padding{
+    padding-top: 50px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.account-look {
+    width: 250px;
+    height: 500px;
+    margin-top: 60px;
+}
+
+.font {
+    font-size: 4rem;
+}
+
+.border-circle {
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 31px 55px 31px 55px;
+    border-color: #1b4751;
+    background-color: #358597;
+    color: #F4A896;
+}
+
 /*Responsive resolution*/
 
 /*Mobile-resolution < 600px*/
