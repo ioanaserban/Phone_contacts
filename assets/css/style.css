@@ -106,12 +106,19 @@ body {
 
 .account-look {
     width: 250px;
-    height: 500px;
-    margin-top: 60px;
+
+}
+
+.height{
+    min-height: 40px;
 }
 
 .font {
     font-size: 4rem;
+}
+
+.setting-m-t{
+   margin-top: 235px;
 }
 
 .border-circle {
@@ -121,6 +128,14 @@ body {
     border-color: #1b4751;
     background-color: #358597;
     color: #F4A896;
+}
+
+.margin-l{
+    margin-left: 95px;
+}
+
+.margin-t{
+    margin-top: 60px;
 }
 
 /*Responsive resolution*/
@@ -137,6 +152,7 @@ body {
     }
 
 }
+
 
 /*Tablet resolution*/
 @media screen and (min-width: 601px) and (max-width: 992px) {
