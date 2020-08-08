@@ -110,7 +110,10 @@ body {
 }
 
 .height{
-    min-height: 40px;
+    min-height: 80px;
+}
+.input-height{
+    height: 60px;
 }
 
 .font {
@@ -118,7 +121,7 @@ body {
 }
 
 .setting-m-t{
-   margin-top: 235px;
+   margin-top: 60px;
 }
 
 .border-circle {
@@ -134,9 +137,53 @@ body {
     margin-left: 95px;
 }
 
+.margin-left-acc{
+    margin-left: 20px;
+}
+
 .margin-t{
     margin-top: 60px;
 }
+
+.animate-left{
+    animation: animate-lft 0.4s;
+}
+
+@keyframes animate-lft {
+    from{width: 0 ; opacity: 0} to {width: 100% ; opacity: 1}
+}
+
+.animate-right{
+    animation: animate-rig 0.4s;
+}
+
+@keyframes animate-rig {
+    from{width: 100%; opacity: 1 } to {width: 0 ; opacity: 0}
+}
+
+.fade-in{
+    animation: fadei 0.4s;
+}
+
+@keyframes fadei {
+    from{opacity: 0} to { opacity: 1}
+}
+
+.fade-out{
+    animation: fadeo 0.4s;
+}
+
+@keyframes fadeo {
+    from{opacity: 1 } to { opacity: 0}
+}
+
+
+
+.setp-in-front{
+    z-index: 10000;
+}
+
+
 
 /*Responsive resolution*/
 
